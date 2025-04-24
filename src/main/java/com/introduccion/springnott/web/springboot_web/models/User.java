@@ -1,10 +1,16 @@
-package com.introduccion.springnott.web.springboot_web.controllers.models;
+package com.introduccion.springnott.web.springboot_web.models;
 
 public class User {
     private String nombre;
     private String apellido;
+    private String email;
 
     public User() {
+    }
+
+    public User(String nombre, String apellido, String email) {
+        this(nombre, apellido);
+        this.email = email;
     }
 
     public User(String nombre, String apellido) {
@@ -26,5 +32,13 @@ public class User {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
